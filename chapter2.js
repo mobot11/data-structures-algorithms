@@ -158,17 +158,43 @@ MonthlyTemps.prototype.average = function() {
     return total / this.tempArray.length;
 };
 
-MonthlyTemps.prototype.weeklyAverage = function() {
-
+MonthlyTemps.prototype.weeklyAverage = function(week) {
+    console.log(week);
+    var newMonth = new Array(this.dataStore);
+    if (week > newMonth.length) {
+        return 'oops there are only' + newMonth.length + ' weeks in this month';
+    }
 };
 
 var julyTemps = new MonthlyTemps(julyTempsArray);
 
 
 
-console.log(julyTemps.dataStore);
+console.log(julyTemps.weeklyAverage(10));
 
-console.log(julyTemps.average());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+
 
 
 
